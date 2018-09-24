@@ -16,7 +16,6 @@ pickMongoPrimary(MONGO_URL, {timeout: TIMEOUT}, function(err, primary) {
     throw err;
   } else {
     var parsedMongoURL = mongodbUrl.parse(MONGO_URL);
-    console.log("parsedMongoURL", parsedMongoURL);
 
     var mongoShellConfig = util.format("%s/%s", 
       primary, parsedMongoURL.database
